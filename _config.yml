@@ -1,0 +1,8 @@
+# Site settings
+title: Yeltzland - a dormant Halesowen Town website
+email: johnp@bravelocation.com
+twitter_username: yeltzland
+github_username:  bravelocation
+
+# Build settings
+markdown: kramdown

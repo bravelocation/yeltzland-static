@@ -1,0 +1,8 @@
+{
+    "name": "converter-app",
+    "version": "1.0.0",
+	"dependencies": {
+    	"xml2js": "*",
+		"request": "*"
+	}	
+}

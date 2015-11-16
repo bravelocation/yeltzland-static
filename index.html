@@ -3,8 +3,46 @@ layout: default
 ---
 
 <div class="home">
-  <h1 class="page-heading">Nothing to see here ... </h1>
-  <p>I stopped keeping this site up-to-date many years ago, so if you've ended up here I'm afraid there's
-   nothing to see any more.
-  </p>
+  <p><b>I stopped keeping this site up-to-date many years ago, so if you've ended up here I'm afraid there's
+   nothing to see any more.</b></p>
+   <h2>Other Halesowen Town websites:</h2>
+
+    <ul>
+      <li><a href="http://yeltz.co.uk">Unofficial Halesowen Town Forum</a></li>
+      <li><a href="http://yeltz.co.uk/fantasyisland">Fantasy Island</a></li>
+      <li><a href="http://ht-fc.com">Official HTFC site</a></li>
+    </ul>
+  <p>For the sake of posterity here are the news stories that appeared from 1997 to 2006...</p>
+</div>
+
+<div class="posts">
+  {% for post in paginator.posts %}
+  <p>&nbsp;</p>
+  <hr />
+  <p>&nbsp;</p>
+  <div class="post">
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+
+    {{ post.content }}
+  </div>
+  {% endfor %}
+</div>
+
+
+<div class="pagination">
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="/">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="/page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="/page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
 </div>

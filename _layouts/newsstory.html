@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+        <h1>{{ page.title }}</h1>
+        <h2>{{ page.match }}</h2>
+        <h3>{{ page.date | date_to_long_string }}</h3>
+        
+        {{ content }}
+      </div>
+    </div>
+  </body>
+
+</html>

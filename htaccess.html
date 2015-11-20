@@ -1,0 +1,9 @@
+---
+layout: null
+permalink: .htaccess
+---
+RewriteEngine On
+{% for post in site.posts %}
+RewriteCond %{QUERY_STRING}	date={{ post.date | date: "%Y%m%d" }}$
+RewriteRule (.*) {{ post.url | replace: '%20', '\ ' | replace: '%3F', '\?' '}}? [R=301,L]
+{% endfor %}			

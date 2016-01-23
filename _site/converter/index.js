@@ -13,6 +13,13 @@ fs.readdir(inputDir, function(err, files) {
         var fullInputPath = inputDir + inputFileName;
         
         fs.readFile(fullInputPath, function(err, data) {
+            
+            // First replace the b/a tags
+            data = data.toString().replace(/<b>/g, '*b*');
+            data = data.replace(/<\/b>/g, '*cb*');
+            data = data.replace(/<a href="(.*)">/g, '*a[$1]*');
+            data = data.replace(/<\/a>/g, '*ca*');
+          
             parser.parseString(data, function (err, result) {
                 if (result) {
                     if (result.NEWS.$$.DATE == undefined || result.NEWS.$$.DATE.length == 0 || result.NEWS.$$.BODY == undefined) {
@@ -42,16 +49,21 @@ fs.readdir(inputDir, function(err, files) {
                     var xml = builder.buildObject(body.$$);
                     xml = xml.replace(/<\$\$>(.|\n)*<\/\$\$>/g, '');
                     for (var i = 0; i < 10; i++) {
-                        var re = new RegExp('<' + i + '>', 'g');
-                        xml = xml.replace(re, '<p>');
+                        var re = new RegExp('<' + i, 'g');
+                        xml = xml.replace(re, '<p');
                         
                         var re2 = new RegExp('</' + i + '>', 'g');
                         xml = xml.replace(re2, '</p>');
                         
-                        var re2 = new RegExp('<' + i + '/>', 'g');
-                        xml = xml.replace(re2, '');
+                        var re3 = new RegExp('<' + i + '/>', 'g');
+                        xml = xml.replace(re3, '');
                     }
                     
+                    xml = xml.replace(/\*b\*/g, ' <b>');
+                    xml = xml.replace(/\*cb\*/g, '<\/b> ');
+                    xml = xml.replace(/\*a\[(.*)\]\*/g, ' <a href="$1">');
+                    xml = xml.replace(/\*ca\*/g, '<\/a> ');
+                  
                     output += xml + '\n';   
                     
                     if (result.NEWS.$$.MATCHREPORT != undefined) {

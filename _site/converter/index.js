@@ -64,6 +64,9 @@ fs.readdir(inputDir, function(err, files) {
                     xml = xml.replace(/\*a\[(.*)\]\*/g, ' <a href="$1">');
                     xml = xml.replace(/\*ca\*/g, '<\/a> ');
                   
+                    // Replace any local links
+                    xml = xml.replace(/<a href="\/(.*)">(.*)<\/a>/g, '$2');
+                                    
                     output += xml + '\n';   
                     
                     if (result.NEWS.$$.MATCHREPORT != undefined) {

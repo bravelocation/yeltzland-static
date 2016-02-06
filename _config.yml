@@ -5,6 +5,8 @@ twitter_username: yeltzland
 github_username:  bravelocation
 paginate: 20
 
-
 # Build settings
 markdown: kramdown
+
+# Gems
+gems: ['jekyll-paginate']

@@ -3,7 +3,7 @@ title: Yeltzland - a dormant Halesowen Town website
 email: johnp@bravelocation.com
 twitter_username: yeltzland
 github_username:  bravelocation
-paginate: 20
+paginate: 10
 
 # Build settings
 markdown: kramdown

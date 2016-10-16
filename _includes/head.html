@@ -8,5 +8,18 @@
 
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/rss.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+  <!-- Twitter cards -->
+  <meta name="twitter:site" content="@{{ site.author.twitter }}" />
+  <meta name="twitter:creator" content="@{{ site.author.twitter }}" />
+
+  <meta name="twitter:card" content="app" />
+  <meta name="twitter:app:name:iphone" content="Yeltzland">
+  <meta name="twitter:app:id:iphone" content="1111223048" />
+  <meta name="twitter:image" content="https://bravelocation.com/images/logos/yeltzland.png">
+  <meta name="og:image" content="https://bravelocation.com/images/logos/yeltzland.png">
+  <meta name="apple-itunes-app" content="app-id=1111223048">
+  <meta name="twitter:app:name:googleplay" content="Yeltzland">
+  <meta name="twitter:app:id:googleplay" content="com.bravelocation.yeltzland" />
 </head>

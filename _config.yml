@@ -13,3 +13,10 @@ gems: ['jekyll-paginate', 'jekyll-feed', 'jekyll-sitemap']
 
 feed:
   path: rss.xml
+
+# About/contact
+author:
+  name:              John Pollard
+  url:               https://bravelocation.com/about
+  email:             johnp@bravelocation.com
+  twitter:           yeltzland

@@ -1,0 +1,31 @@
+body {
+  background-color: #fff;
+  font-family: "Lato", Verdana, sans-serif;
+}
+h1,
+h2 {
+  padding: 10px 0px 10px 0px;
+  font-family: "Lato", Verdana, sans-serif;
+  color: #063796;
+}
+h3,
+h4 {
+  padding: 10px 0px 10px 0px;
+  font-family: "Lato", Verdana, sans-serif;
+  color: #063796;
+}
+p,
+div,
+span,
+li {
+  font-family: "Lato", Verdana, sans-serif;
+  font-size: 18px;
+  line-height: 1.5em;
+}
+a {
+  color: #063796;
+}
+a:hover,
+a:focus {
+  color: #063796;
+}

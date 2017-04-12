@@ -6,13 +6,13 @@ h1,
 h2 {
   padding: 10px 0px 10px 0px;
   font-family: "Lato", Verdana, sans-serif;
-  color: #063796;
+  color: green;
 }
 h3,
 h4 {
   padding: 10px 0px 10px 0px;
   font-family: "Lato", Verdana, sans-serif;
-  color: #063796;
+  color: green;
 }
 p,
 div,
@@ -28,4 +28,9 @@ a {
 a:hover,
 a:focus {
   color: #063796;
+}
+hr {
+  border-top: 1px solid green;
+  margin-top: 50px;
+  margin-bottom: 25px;
 }

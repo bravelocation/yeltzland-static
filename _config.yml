@@ -10,8 +10,8 @@ paginate: 10
 # Build settings
 markdown: kramdown
 
-# Gems
-gems: ['jekyll-paginate', 'jekyll-feed', 'jekyll-sitemap']
+# Plugins
+plugins: ['jekyll-paginate', 'jekyll-feed', 'jekyll-sitemap']
 
 feed:
   path: rss.xml

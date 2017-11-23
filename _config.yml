@@ -3,8 +3,8 @@ title:              Yeltzland - a dormant Halesowen Town website
 email:              johnp@bravelocation.com
 twitter_username:   yeltzland
 github_username:    bravelocation
-url:                 http://www.yeltzland.net
-baseurl:             ''
+url:                https://www.yeltzland.net
+baseurl:            ''
 paginate: 10
 
 # Build settings

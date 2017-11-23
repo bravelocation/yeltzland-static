@@ -2,14 +2,30 @@
 layout: default
 title: Add HTFC fixtures to your calendar
 ---
-
+<style>
+    .server-location {
+        font-size: small;
+    }
+</style>
+<script>
+    function copyText() {
+        var copyText = document.getElementById("server-location-text");
+        copyText.select();
+        document.execCommand("Copy");
+    }
+</script>
 <p>If you want the fixture list (including the results) in your calendar, follow the instructions below for your operating system.</p>
 
 <p>If you can't figure it out, try searching for "adding iCal to calendar" to find some suitable instructions</p>
 
+
+<h3>Server location to use:</h3>
+<p><input type="text" value="https://bravelocation.com/automation/feeds/htfc-fixtures.iCal" id="server-location-text" size="30"><button onclick="copyText()">Copy</button></p>
+
 <h3>iOS <small><i class="fa fa-apple"></i></small></h3>
 
 <p>Instructions from <a href="https://www.imore.com/how-subscribe-calendars-your-iphone-or-ipad">iMore</a>:</p>
+
 
 <ol>
 <li>Launch the Settings app on your iPhone or iPad.</li>
@@ -17,11 +33,14 @@ title: Add HTFC fixtures to your calendar
 <li>Tap on Add Account.</li>
 <li>Tap on Other.</li>
 <li>Tap on Add Subscribed Calendar under the Other section.</li>
-<li>Enter or copy in the server location of the calendar - <b>https://bravelocation.com/automation/feeds/htfc-fixtures.iCal</b></li>
+<li>Copy the server location from above</li>
 <li>Turn on 'Use SSL'</li>
 <li>Tap the Next button</li>
 <li>Tap the Save button</li>
 </ol>
+
+<p class="server-location">Server location: https://bravelocation.com/automation/feeds/htfc-fixtures.iCal</p>
+
 
 <h3>Android/Google calendar <small><i class="fa fa-android"></i></small></h3>
 
@@ -31,8 +50,10 @@ title: Add HTFC fixtures to your calendar
 <li>Open <a href="https://calendar.google.com/">Google Calendar</a></li>
 <li>Next to "Other calendars" on the left, click the Down arrow.</li>
 <li>Select Add by URL.</li>
-<li>Enter the calendar's address in the field provided - use <b>https://bravelocation.com/automation/feeds/htfc-fixtures.iCal</b></li>
+<li>Enter the calendar's address in the field provided - copy the server location from above</li>
 <li>Click Add Calendar. The calendar will appear on the left side under "Other calendars."</li>
 </ol>
+
+<p class="server-location">Server location: https://bravelocation.com/automation/feeds/htfc-fixtures.iCal</p>
 
 <p>Note: It might take up to 12 hours for changes to show in your Google Calendar.</p>
